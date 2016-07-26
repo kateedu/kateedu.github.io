@@ -104,7 +104,7 @@ ul.nav li {
     -ms-filter: blur(2px) contrast(1.1) brightness(.95);
     filter: blur(2px) contrast(1.1) brightness(.95);
     transform: scale(1.01);
-    background: url(/../images/exeter3.jpg) no-repeat center center fixed;
+    background: url(/images/exeter3.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -152,7 +152,7 @@ ul.nav li {
     width: 100%;
     height: 100%;
     z-index: -2;
-    background: url(/../images/exeter4.jpg) no-repeat center center fixed;
+    background: url(/images/exeter4.jpg) no-repeat center center fixed;
     -webkit-filter: blur(2px);
     -moz-filter: blur(2px);
     -o-filter: blur(2px);
