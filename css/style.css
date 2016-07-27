@@ -143,6 +143,10 @@ ul.nav li {
     width: 140px;
 }
 
+#team-members div {
+    padding: 0px 60px;
+}
+
 #information:before {
     content: "";
     position: absolute;
@@ -196,8 +200,12 @@ footer .glyphicon:hover {
 
 @media (max-width: 767px) {
     #home:before, #information:before {
-        /*transform:none;
-        filter: none;*/
         background-attachment: scroll;
+    }
+    #team-members div {
+        padding: 10px;
+    }
+    #about div div {
+        display: block;
     }
 }
