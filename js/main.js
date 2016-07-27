@@ -5,6 +5,7 @@ $(function() {
     if ($(document).width() <= 767) {
         $members.removeClass('text-left');
         $members.addClass('text-center');
+        $('.resu').addClass('text-left')
     }
 
     $('a').click(function() {

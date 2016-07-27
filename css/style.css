@@ -198,6 +198,10 @@ footer .glyphicon:hover {
     color: #306d9f;
 }
 
+.resu {
+    padding: 0px !important;
+}
+
 @media (max-width: 767px) {
     #home:before, #information:before {
         background-attachment: scroll;
