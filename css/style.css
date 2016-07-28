@@ -15,7 +15,7 @@ body {
     padding: 0px;
 }
 
-.logo-click img {
+.logo-click svg {
     margin: 0px 10px;
     height: 50px;
     width: auto;
@@ -64,6 +64,23 @@ body {
 
 ul.nav li {
     font-size: 18px !important;
+}
+
+button.navbar-toggle {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+
+.navbar-toggle .icon-bar {
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    border-radius: 1px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 6px;
 }
 
 /* vertical-centered text */
