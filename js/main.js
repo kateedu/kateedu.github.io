@@ -52,7 +52,7 @@ $(function() {
                 $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
             })
         } else if ($(document).width() >= 992) {
-            $('#desc').animate({left: 800}, 400, function () {
+            $('#desc').animate({left: -800}, 400, function () {
                 $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
             })
         } else {
