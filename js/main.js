@@ -51,6 +51,10 @@ $(function() {
             $('#desc').animate({top: $(window).height()}, 400, function () {
                 $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
             })
+        } else if ($(document).width() >= 992) {
+            $('#desc').animate({left: 800}, 400, function () {
+                $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
+            })
         } else {
             $('#desc').animate({left: $(window).width()*-.8}, 400, function () {
                 $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})

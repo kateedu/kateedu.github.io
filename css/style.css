@@ -267,6 +267,12 @@ footer .glyphicon:hover {
     padding: 0px !important;
 }
 
+@media (min-width: 992px) {
+    #desc {
+        width: 800px;
+    }
+}
+
 @media (max-width: 767px) {
     #desc {
         top: 100vh;
