@@ -9,6 +9,37 @@ body {
     overflow-x: hidden;
 }
 
+.shadow {
+    z-index: 1031;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+    background-color: black;
+}
+
+#desc {
+    opacity: 1;
+    z-index: 1032;
+    position: fixed;
+    top: 0;
+    left: -80vw;
+    width: 80vw;
+    height: 100vh;
+    background-color: #8ed2db;
+    color: white;
+    padding: 40px;
+    font-size: 18px;
+    overflow: scroll !important;
+}
+
+#desc p {
+    line-height: 2;
+}
+
 .logo-click {
     display: block;
     margin: 10px 0px 5px 0px;
@@ -39,13 +70,31 @@ body {
     border-radius: 50%;
 }
 
+.panel-heading {
+    background-color: #961914 !important;
+}
+
 .panel-heading h4 {
     font-size: 22px !important;
+    color :white;
 }
 
 .panel-body.lead {
     font-size: 18px !important;
     margin-bottom: 0px !important;
+}
+
+.panel-body.lead ul li {
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.panel-body.lead ul li span.service-desc{
+    display: none;
+}
+
+.panel-body.lead ul li:hover {
+    color: #8ed2db;
 }
 
 .vertical-align {
@@ -158,6 +207,7 @@ button.navbar-toggle {
     width: 140px;
 }
 
+
 #team-members div {
     padding: 0px 60px;
 }
@@ -218,6 +268,12 @@ footer .glyphicon:hover {
 }
 
 @media (max-width: 767px) {
+    #desc {
+        top: 100vh;
+        left: 0vw;
+        width: 100vw;
+        height: 80vh;
+    }
     #home:before, #information:before {
         background-attachment: scroll;
     }
