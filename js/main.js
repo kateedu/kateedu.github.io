@@ -1,5 +1,28 @@
 $(function() {
 
+    $(window).on('popstate', function(e) {
+        if (! e.state) {
+            var top = $('body').offset().top*-1
+            $('body').css({
+                top: '',
+                position: ''
+            }).scrollTop(top)
+            if ($(document).width() <= 767) {
+                $('#desc').animate({top: $(window).height()}, 400, function () {
+                    $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
+                })
+            } else if ($(document).width() >= 992) {
+                $('#desc').animate({left: -800}, 400, function () {
+                    $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
+                })
+            } else {
+                $('#desc').animate({left: $(window).width()*-.8}, 400, function () {
+                    $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
+                })
+            }
+        }
+    })
+
     var $root = $('html, body'),
         $members = $("#team-members");
 
@@ -30,6 +53,7 @@ $(function() {
         })
         var title = $(this).children('.service-title').text()
         var desc = $(this).children('.service-desc').html()
+        history.pushState({content: title}, "description", "#desc");
         if ($(document).width() <= 767){
             $('.shadow').show().animate({opacity: .4}, 200, function () {
                 $('#desc h1').text(title).siblings('p').html(desc).parent().animate({top: $(window).height()*.2}, 400)
@@ -42,24 +66,7 @@ $(function() {
     })
 
     $('.shadow').click(function () {
-        var top = $('body').offset().top*-1
-        $('body').css({
-            top: '',
-            position: ''
-        }).scrollTop(top)
-        if ($(document).width() <= 767) {
-            $('#desc').animate({top: $(window).height()}, 400, function () {
-                $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
-            })
-        } else if ($(document).width() >= 992) {
-            $('#desc').animate({left: -800}, 400, function () {
-                $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
-            })
-        } else {
-            $('#desc').animate({left: $(window).width()*-.8}, 400, function () {
-                $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
-            })
-        }
+        history.back()
     })
 
     $(document).on('touchstart',function (event) {
