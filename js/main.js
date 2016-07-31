@@ -9,14 +9,17 @@ $(function() {
             }).scrollTop(top)
             if ($(document).width() <= 767) {
                 $('#desc').animate({top: $(window).height()}, 400, function () {
+                    $('#desc').hide()
                     $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
                 })
             } else if ($(document).width() >= 992) {
                 $('#desc').animate({left: -800}, 400, function () {
+                    $('#desc').hide()
                     $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
                 })
             } else {
                 $('#desc').animate({left: $(window).width()*-.8}, 400, function () {
+                    $('#desc').hide()
                     $('.shadow').animate({opacity: 0}, 200, function() {$(this).hide()})
                 })
             }
@@ -56,11 +59,11 @@ $(function() {
         history.pushState({content: title}, "description", "#desc");
         if ($(document).width() <= 767){
             $('.shadow').show().animate({opacity: .4}, 200, function () {
-                $('#desc h1').text(title).siblings('p').html(desc).parent().animate({top: $(window).height()*.2}, 400)
+                $('#desc h1').text(title).siblings('p').html(desc).parent().show().animate({top: $(window).height()*.2}, 400)
             });
         } else {
             $('.shadow').show().animate({opacity: .4}, 200, function () {
-                $('#desc h1').text(title).siblings('p').html(desc).parent().animate({left: 0}, 400)
+                $('#desc h1').text(title).siblings('p').html(desc).parent().show().animate({left: 0}, 400)
             });
         }
     })
