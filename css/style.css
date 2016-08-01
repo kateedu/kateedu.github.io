@@ -89,6 +89,10 @@ body {
     transition: color .2s;
 }
 
+.panel-body.lead ul li span.service-title {
+    font-weight: 500;
+}
+
 .panel-body.lead ul li span.service-desc{
     display: none;
 }
