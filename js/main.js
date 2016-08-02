@@ -52,7 +52,8 @@ $(function() {
     $('.panel-body.lead ul li').click(function() {
         $('body').css({
             top: '-'+$('body').scrollTop()+'px',
-            position: 'fixed'
+            position: 'fixed',
+            overflowY: 'scroll !important'
         })
         var title = $(this).children('.service-title').text()
         var desc = $(this).children('.service-desc').html()
