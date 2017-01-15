@@ -12,6 +12,11 @@ body {
     overflow-x: hidden;
 }
 
+.btn-danger:hover {
+    outline: 0 none;
+    background-color: rgb(217,83,79) !important;
+}
+
 .shadow {
     z-index: 1031;
     position: fixed;
