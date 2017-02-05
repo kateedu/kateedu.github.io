@@ -10,7 +10,7 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
-    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/parsley.min.js"></script>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
     <script src="dist/js/bootstrap.min.js"></script>
@@ -54,7 +54,11 @@
 
     <div class="contact pad-section" id="form">
         <div class="container">
-            <h2 >상담신청</h2> <hr />
+            <h2 >상담신청</h2>
+            <!-- <p style="color: red;">
+                인터넷 익스플로러에서는 에러가
+            </p> -->
+            <hr />
             <form id="gform">
                 <p><label for="StudentName">학생이름<sup style="color:red;">*</sup></label><br>
                 <input name="StudentName" type="text" required/></p><br>
@@ -113,7 +117,7 @@
     <script type="text/javascript" language="javascript">
         $(function() {
             $.map(["9:00 AM - 10:30 AM","11:00 AM - 12:30 PM","2:00 PM - 3:30 PM","4:00 PM - 5:30 PM","7:00 PM - 8:30 PM"],function(n,i){
-                 $("#gform #time").append(`<option value="${n}">${n}</option>`)
+                 $("#gform #time").append('<option value="'+n+'">'+n+'</option>')
             })
 
             var request;
