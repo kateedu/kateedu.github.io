@@ -1,0 +1,152 @@
+<li><!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <title>KateEdu - 미국보딩스쿨, 미국대학, 미국썸머캠프, 국제학교입학</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index,follow" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/parsley.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <style media="screen">
+        #form {
+            font-size: 1.2em;
+        }
+        #form input,option {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="shadow"></div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo-click" href="/#home">
+                    <svg id="Layer_1" data-name="Layer 1" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.4 128.51"><defs><style>.cls-1{fill:#90d0da;}.cls-2{fill:#fff;}.cls-3{fill:#961914;}.cls-4{fill:#db968e;}</style></defs><title>kateedu</title><rect class="cls-1" x="58.34" y="8.51" width="385.06" height="120"/><path class="cls-2" d="M435.6,295h9.15v33.16H435.6v-3.5a18.13,18.13,0,0,1-5.37,3.34,16.37,16.37,0,0,1-5.84,1,17,17,0,0,1-12.22-5A16.53,16.53,0,0,1,407,311.6,16.89,16.89,0,0,1,412,299a17.42,17.42,0,0,1,18.28-3.78,17,17,0,0,1,5.32,3.38V295ZM426,301.79a9.71,9.71,0,0,0-7,2.73,9.33,9.33,0,0,0-2.81,7,9.43,9.43,0,0,0,2.86,7.07,9.71,9.71,0,0,0,7,2.77,9.91,9.91,0,0,0,7.15-2.73,9.46,9.46,0,0,0,2.84-7.15,9.2,9.2,0,0,0-2.84-7A10,10,0,0,0,426,301.79Z" transform="translate(-228.6 -227.26)"/><path class="cls-2" d="M455.11,282.74h9.15V295h5.43v7.16h-5.43v26h-9.15v-26h-4.69V295h4.69V282.74Z" transform="translate(-228.6 -227.26)"/><path class="cls-2" d="M511.13,313.95h-29.4a8.72,8.72,0,0,0,3.4,5.62,11.39,11.39,0,0,0,7.06,2.09A12.86,12.86,0,0,0,501,318.4l7.71,3.29a17.79,17.79,0,0,1-6.91,5.5,23.45,23.45,0,0,1-9.55,1.78q-8.58,0-14-4.92a16,16,0,0,1-5.4-12.33,16.5,16.5,0,0,1,5.38-12.6,19,19,0,0,1,13.49-5q8.61,0,14,5t5.4,13.24ZM502,307.39a8.43,8.43,0,0,0-3.58-4.51,11.1,11.1,0,0,0-6.2-1.74,11.71,11.71,0,0,0-6.72,2,11,11,0,0,0-3.36,4.3H502Z" transform="translate(-228.6 -227.26)"/><path class="cls-2" d="M599.24,282.16h9.15v46h-9.15v-3.5a18.13,18.13,0,0,1-5.37,3.34,16.37,16.37,0,0,1-5.84,1,17,17,0,0,1-12.22-5,16.53,16.53,0,0,1-5.16-12.39,16.89,16.89,0,0,1,5-12.59,17.41,17.41,0,0,1,18.28-3.78,17,17,0,0,1,5.32,3.38V282.16Zm-9.62,19.63a9.71,9.71,0,0,0-7,2.73,9.33,9.33,0,0,0-2.81,7,9.43,9.43,0,0,0,2.86,7.07,9.71,9.71,0,0,0,7,2.77,9.91,9.91,0,0,0,7.15-2.73,9.46,9.46,0,0,0,2.84-7.15,9.2,9.2,0,0,0-2.84-7A10,10,0,0,0,589.61,301.79Z" transform="translate(-228.6 -227.26)"/><path class="cls-2" d="M617.61,295h9.25v16a20.2,20.2,0,0,0,.71,6.48,5.72,5.72,0,0,0,2.27,2.82,7,7,0,0,0,3.85,1,7.22,7.22,0,0,0,3.88-1,5.89,5.89,0,0,0,2.37-2.91q0.57-1.43.57-6.13V295h9.15V309q0,8.69-1.51,11.89a13.34,13.34,0,0,1-5.43,6A17.93,17.93,0,0,1,633.6,329a17.38,17.38,0,0,1-9.71-2.44,13,13,0,0,1-5.21-6.8q-1.07-3-1.07-11V295Z" transform="translate(-228.6 -227.26)"/><path class="cls-3" d="M355.61,265.35h13.28V287l18.74-21.64h15.78l-24.11,28,26.45,34.75H390.17l-21.28-27.89v27.89H355.61V265.35Z" transform="translate(-228.6 -227.26)"/><path class="cls-3" d="M522.73,265.35h37.69V277H535.78v11.35h24.64v11.48H535.78v16.51h24.64v11.73H522.73V265.35Z" transform="translate(-228.6 -227.26)"/><ellipse class="cls-1" cx="58.34" cy="68.51" rx="58.34" ry="60"/><circle class="cls-2" cx="58.34" cy="68.51" r="39.53"/><circle class="cls-1" cx="58.34" cy="68.51" r="21.11"/><path class="cls-3" d="M248.51,277.24a70.88,70.88,0,0,1,39.18,30.32,100.91,100.91,0,0,1,42.41-50.31c0-4.15.23-8.61,0.67-13.33a161.15,161.15,0,0,1,2.41-16.66,141.41,141.41,0,0,0-47.41,56,66.48,66.48,0,0,0-14.59-17.76Z" transform="translate(-228.6 -227.26)"/><path class="cls-4" d="M315.33,238.33" transform="translate(-228.6 -227.26)"/><path class="cls-4" d="M362.33,196.33" transform="translate(-228.6 -227.26)"/></svg>                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse-main">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a class="btn btn-danger" style="margin: 10px;padding: 2px 10px; color: white; font-size: 1em;" href="/form.html">상담신청</a></li> -->
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#information">Service</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="contact pad-section" id="form">
+        <div class="container">
+            <h2 >상담신청</h2>
+            <!-- <p style="color: red;">
+                인터넷 익스플로러에서는 에러가
+            </p> -->
+            <hr />
+            <form id="gform">
+                <p><label for="StudentName">학생이름<sup style="color:red;">*</sup></label><br>
+                <input name="StudentName" type="text" required/></p><br>
+
+                <p><label for="Birthdate">생년월일 (mm/dd/yyyy)<sup style="color:red;">*</sup></label><br>
+                <input name="Birthdate" type="date" required/></p><br>
+
+                <p><label for="SchoolGrade">현재학교 / 학년<sup style="color:red;">*</sup></label><br>
+                <input name="SchoolGrade" type="text" required/></p><br>
+
+                <p><label for="Foreign">해외거주경험</label><br>
+                <textarea cols="50" rows="5" name="Foreign" ></textarea></p><br>
+
+                <p><label for="Test">공인시험성적 (SSAT, SAT, TOEFL, SCAT, AMC/AIME, KMO, etc)</label><br>
+                <textarea cols="50" rows="5" name="Test"></textarea></p><br>
+
+                <p><label for="Activities">액티비티</label><br>
+                <textarea cols="50" rows="5" name="Activities"></textarea></p><br>
+
+                <p><label for="Awards">수상내역</label><br>
+                <textarea cols="50" rows="5" name="Awards"></textarea></p><br>
+
+                <p><label for="Camps">참가캠프</label><br>
+                <textarea cols="50" rows="5" name="Camps"></textarea></p><br>
+
+                <p><label for="ContactCell">부모님 휴대폰<sup style="color:red;">*</sup></label><br>
+                <input name="ContactCell" type="text" required pattern="^[0-9()\-\+]*$"/></p><br>
+
+                <p><label for="ContactEmail">부모님 이메일<sup style="color:red;">*</sup></label><br>
+                <input name="ContactEmail" type="email" required/></p><br>
+
+                <p><label for="Meeting">상담 희망일 (mm/dd/yyyy)</label><br>
+                <input name="Meeting" type="date"/></p><br>
+
+                <p><label for="MeetingTime">상담 희망시간</label><br>
+                <select id="time" name="MeetingTime" ></select></p><br>
+
+                <p><label for="Additional">원하시는 상담 내용을 구체적으로 작성해주세요.<sup style="color:red;">*</sup></label><br>
+                <textarea cols="50" rows="5" name="Additional" required></textarea></p>
+
+                <p style="font-size:.7em;"><b>규정</b>: 작성해주신 개인정보는 철저히 보안 관리됩니다<br>
+                    신청서 확인 후 확정된 상담시간 및 상담료 납부 정보는 개별연락 드립니다.<br>
+                    KateEdu 서비스 이용 시 상담료를 차감해드립니다.<br></p>
+
+                <input type="submit" value="Send" class="btn btn-primary" />
+            </form>
+            <p id="result" style="font-size:1.3em"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="text-center">Copyright &copy; KateEdu 2016</p>
+        </div>
+    </footer>
+    <script type="text/javascript" language="javascript">
+        $(function() {
+            $.map(["10:00 AM - 11:30 AM","12:00 PM - 1:30 PM","2:00 PM - 3:30 PM","4:00 PM - 5:30 PM","7:00 PM - 8:30 PM"],function(n,i){
+                 $("#gform #time").append('<option value="'+n+'">'+n+'</option>')
+            })
+
+            var request;
+            $("#gform").submit(function(event){
+                $(this).parsley()
+                if (request) {
+                    request.abort();
+                }
+                var $form = $(this);
+                var $inputs = $form.find("input, select, button, textarea");
+                var serializedData = $form.serialize();
+                $inputs.prop("disabled", true);
+                $('#result').text('전송중...');
+                request = $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbzR7Wy6GgzVyP1VzGSG5nD1bFvpwe5v5t_VIkgheOJG-cmEAeU/exec",
+                    type: "post",
+                    data: serializedData
+                }).done(function (response, textStatus, jqXHR){
+                    $('#gform').remove();
+                    $('#result').empty().append('전송완료<br><br><a href="/#home">초기화면으로 돌아가기</a>');
+
+                }).fail(function (jqXHR, textStatus, errorThrown){
+                    $('#result').text('전송중 오류 발생')
+                }).always(function () {
+                    $inputs.prop("disabled", false);
+                });
+                event.preventDefault();
+            });
+        })
+    </script>
+</body>
+</html>

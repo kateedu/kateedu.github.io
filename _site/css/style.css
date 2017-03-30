@@ -1,0 +1,304 @@
+/* general styles */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+html, body {
+    height: 100%;
+    width: 100%;
+    word-break: keep-all;
+    font-family: 'Nanum Gothic', sans-serif !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.btn-danger:hover {
+    outline: 0 none;
+    background-color: rgb(217,83,79) !important;
+}
+
+.shadow {
+    z-index: 1031;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+    background-color: black;
+}
+
+#desc {
+    opacity: 1;
+    z-index: 1032;
+    position: fixed;
+    top: 0;
+    left: -80vw;
+    width: 80vw;
+    height: 100vh;
+    background-color: #8ed2db;
+    color: white;
+    padding: 40px;
+    font-size: 18px;
+    overflow: auto !important;
+}
+
+#desc p {
+    line-height: 2;
+}
+
+.logo-click {
+    display: block;
+    margin: 10px 0px 5px 0px;
+    padding: 0px;
+}
+
+.logo-click svg {
+    margin: 0px 10px;
+    height: 50px;
+    width: auto;
+}
+
+/* padded section */
+.pad-section {
+    padding: 50px 0;
+}
+.pad-section img {
+    width: 100%;
+}
+
+#continue-btn {
+    background: none;
+    color: white;
+    border-color: white;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.panel-heading {
+    background-color: #961914 !important;
+}
+
+.panel-heading h4 {
+    font-size: 22px !important;
+    color :white;
+}
+
+.panel-body.lead {
+    font-size: 18px !important;
+    margin-bottom: 0px !important;
+}
+
+.panel-body.lead ul li {
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.panel-body.lead ul li span.service-title {
+    font-weight: 500;
+}
+
+.panel-body.lead ul li span.service-desc{
+    display: none;
+}
+
+.panel-body.lead ul li:hover {
+    color: #8ed2db;
+}
+
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Optional, to align inner items
+                              horizontally inside the column */
+}
+
+ul.nav li {
+    font-size: 18px !important;
+}
+
+button.navbar-toggle {
+    height: 50px;
+    width: 50px;
+}
+
+.navbar-toggle .icon-bar {
+    /*display: inline-block;*/
+    width: 30px;
+    height: 3px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 6px;
+}
+
+/* vertical-centered text */
+.text-vcenter {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.vcenter {
+    display: block;
+    vertical-align: middle;
+    float: right;
+}
+.text-vcenter h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li a {
+    line-height: 40px;
+}
+
+/* additional sections */
+#home:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-filter: blur(2px) contrast(1.1) brightness(.95);
+    -moz-filter: blur(2px) contrast(1.1) brightness(.95);
+    -o-filter: blur(2px) contrast(1.1) brightness(.95);
+    -ms-filter: blur(2px) contrast(1.1) brightness(.95);
+    filter: blur(2px) contrast(1.1) brightness(.95);
+    transform: scale(1.01);
+    background: url(/images/exeter3.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#home {
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#about {
+    background-color: white;
+}
+
+#team {
+    background-color: #8ed2db;
+    color: #ffffff;
+}
+#team .glyphicon {
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 60px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    vertical-align: middle;
+    width: 140px;
+}
+
+
+#team-members div {
+    padding: 0px 60px;
+}
+
+#information:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: url(/images/exeter4.JPG) no-repeat center center fixed;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    transform: scale(1.01);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#information {
+    display: table;
+    /*height: 100%;*/
+    position: relative;
+    width: 100%;
+}
+
+#fifth {
+    background-color: #8ed2db;
+    color: #ffffff;
+}
+
+#contact {
+    /*height: 250px;*/
+    background-color: white;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: white;
+}
+footer .glyphicon {
+    color: #333333;
+    font-size: 60px;
+}
+footer .glyphicon:hover {
+    color: #306d9f;
+}
+
+.resu {
+    padding: 0px !important;
+}
+
+@media (min-width: 992px) {
+    #desc {
+        width: 800px;
+    }
+}
+
+@media (max-width: 767px) {
+    #desc {
+        top: 100vh;
+        left: 0vw;
+        width: 100vw;
+        height: 80vh;
+    }
+    #home:before, #information:before {
+        background-attachment: scroll;
+    }
+    #team-members div {
+        padding: 10px;
+    }
+    #about div div {
+        display: block;
+    }
+}
