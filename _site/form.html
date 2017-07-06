@@ -55,16 +55,18 @@
     <div class="contact pad-section" id="form">
         <div class="container">
             <h2 >상담신청</h2>
-            <!-- <p style="color: red;">
-                인터넷 익스플로러에서는 에러가
-            </p> -->
+            <p id="ie-warn" style="color: red;">
+                보안상의 이유로, 인터넷 익스프로러로 상담신청을 할 경우 문제가 발생 할 수 있으니 <br>
+                <a href="https://www.google.co.kr/intl/ko/chrome/browser/desktop/">구글 크롬</a>,
+                <a href="https://www.mozilla.org/ko/firefox/new/">파이어팍스</a> 등 다른 브라우저를 이용 해 주시기 바랍니다.
+            </p>
             <hr />
             <form id="gform">
                 <p><label for="StudentName">학생이름<sup style="color:red;">*</sup></label><br>
                 <input name="StudentName" type="text" required/></p><br>
 
-                <p><label for="Birthdate">생년월일 (mm/dd/yyyy)<sup style="color:red;">*</sup></label><br>
-                <input name="Birthdate" type="date" required/></p><br>
+                <p><label for="Birthdate">출생연도 (mm/dd/yyyy)<sup style="color:red;">*</sup></label><br>
+                <input name="Birthdate" type="text" required/></p><br>
 
                 <p><label for="SchoolGrade">현재학교 / 학년<sup style="color:red;">*</sup></label><br>
                 <input name="SchoolGrade" type="text" required/></p><br>
@@ -91,7 +93,7 @@
                 <input name="ContactEmail" type="email" required/></p><br>
 
                 <p><label for="Meeting">상담 희망일 (mm/dd/yyyy)</label><br>
-                <input name="Meeting" type="date"/></p><br>
+                <input name="Meeting" type="text" required/></p><br>
 
                 <p><label for="MeetingTime">상담 희망시간</label><br>
                 <select id="time" name="MeetingTime" ></select></p><br>
@@ -115,38 +117,38 @@
         </div>
     </footer>
     <script type="text/javascript" language="javascript">
-        $(function() {
-            $.map(["10:00 AM - 11:30 AM","12:00 PM - 1:30 PM","2:00 PM - 3:30 PM","4:00 PM - 5:30 PM","7:00 PM - 8:30 PM"],function(n,i){
-                 $("#gform #time").append('<option value="'+n+'">'+n+'</option>')
-            })
-
-            var request;
-            $("#gform").submit(function(event){
-                $(this).parsley()
-                if (request) {
-                    request.abort();
-                }
-                var $form = $(this);
-                var $inputs = $form.find("input, select, button, textarea");
-                var serializedData = $form.serialize();
-                $inputs.prop("disabled", true);
-                $('#result').text('전송중...');
-                request = $.ajax({
-                    url: "https://script.google.com/macros/s/AKfycbzR7Wy6GgzVyP1VzGSG5nD1bFvpwe5v5t_VIkgheOJG-cmEAeU/exec",
-                    type: "post",
-                    data: serializedData
-                }).done(function (response, textStatus, jqXHR){
-                    $('#gform').remove();
-                    $('#result').empty().append('전송완료<br><br><a href="/#home">초기화면으로 돌아가기</a>');
-
-                }).fail(function (jqXHR, textStatus, errorThrown){
-                    $('#result').text('전송중 오류 발생')
-                }).always(function () {
-                    $inputs.prop("disabled", false);
-                });
-                event.preventDefault();
-            });
+      $(function() {
+        var isIe = /*@cc_on!@*/false || !!document.documentMode;
+        if (!isIe) $("#ie-warn").hide()
+        $.map(["10:00 AM - 11:30 AM","12:00 PM - 1:30 PM","2:00 PM - 3:30 PM","4:00 PM - 5:30 PM","7:00 PM - 8:30 PM"],function(n,i){
+             $("#gform #time").append('<option value="'+n+'">'+n+'</option>')
         })
+
+        var request;
+        $("#gform").submit(function(event) {
+          $(this).parsley()
+          if (request) request.abort();
+          var $form = $(this);
+          var $inputs = $form.find("input, select, button, textarea");
+          var serializedData = $form.serialize();
+          $inputs.prop("disabled", true);
+          $('#result').text('전송중...');
+          request = $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbzR7Wy6GgzVyP1VzGSG5nD1bFvpwe5v5t_VIkgheOJG-cmEAeU/exec",
+            type: "post",
+            data: serializedData
+          }).done(function (response, textStatus, jqXHR){
+            $('#gform').remove();
+            $('#result').empty().append('전송완료<br><br><a href="/#home">초기화면으로 돌아가기</a>');
+
+          }).fail(function (jqXHR, textStatus, errorThrown){
+            $('#result').text('전송중 오류 발생')
+          }).always(function () {
+            $inputs.prop("disabled", false);
+          });
+          event.preventDefault();
+        });
+      })
     </script>
 </body>
 </html>
